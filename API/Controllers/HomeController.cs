@@ -79,26 +79,26 @@ namespace API.Controllers
 
     
 
-        [HttpPost("edit")]
-        public ActionResult Edit(string levelcode, Level level)
-        {
-            if (ModelState.IsValid == true)
-            {
-                LevelDbContext context = new LevelDbContext();
-                bool check = context.UpdateLevel(level);
-                if (check == true)
-                {
-                    //TempData["UpdateMessage"] = "Data has been Updated Successfully.";
-                    ModelState.Clear();
-                    //return RedirectToAction("Index");
-                    var row = context.getLevel().Find(model => model.LEVEL_Code == levelcode);
-                    return Ok(row);
-                }
+        // [HttpPost("edit")]
+        // public ActionResult Edit(string levelcode, Level level)
+        // {
+        //     if (ModelState.IsValid == true)
+        //     {
+        //         LevelDbContext context = new LevelDbContext();
+        //         bool check = context.UpdateLevel(level);
+        //         if (check == true)
+        //         {
+        //             //TempData["UpdateMessage"] = "Data has been Updated Successfully.";
+        //             ModelState.Clear();
+        //             //return RedirectToAction("Index");
+        //             var row = context.getLevel().Find(model => model.LEVEL_Code == levelcode);
+        //             return Ok(row);
+        //         }
 
-            }
+        //     }
 
-            return Ok();
-        }
+        //     return Ok();
+        // }
 
 
 
@@ -239,31 +239,7 @@ namespace API.Controllers
         // }
 
 
-        // [HttpDelete("Deletelevel")]
-        // public bool DeleteLevel(String levelCode)
-        // {
-
-        //     string cs = "Data Source =localhost ;Initial Catalog=Level;User Id=sa;Password=Strong@1234;";
-        //     SqlConnection con = new SqlConnection(cs);
-        //     string Q = "sp_Level_detailsDelete";
-        //     SqlCommand cmd = new SqlCommand(Q, con);
-        //     //SqlDataAdapter sda = new SqlDataAdapter(Q, con);
-        //     cmd.CommandType = CommandType.StoredProcedure;
-        //     cmd.Parameters.AddWithValue("@LEVEL_Code", levelCode);
-        //     con.Open();
-        //     int i = cmd.ExecuteNonQuery();
-        //     con.Close();
-
-        //     if (i > 0)
-        //     {
-        //         return true;
-        //     }
-        //     else
-        //     {
-        //         return false;
-        //     }
-
-        // }
+    
 
         // [HttpPost("Updatelevel")]
         // public bool UpdateLevel(String levelcode, String description, String active)
