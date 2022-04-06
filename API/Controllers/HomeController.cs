@@ -148,8 +148,6 @@ namespace API.Controllers
             int i = cmd.ExecuteNonQuery();
             con.Close();
 
-
-
             if (i > 0)
             {
             return true;
