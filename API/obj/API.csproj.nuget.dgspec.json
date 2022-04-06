@@ -14,7 +14,7 @@
         "outputPath": "/Users/ranu.singh/Documents/demo/API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/ranu.singh/.nuget/NuGet/NuGet.Config"
+          "/Users/ranu.singh/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
